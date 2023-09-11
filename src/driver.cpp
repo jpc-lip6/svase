@@ -111,7 +111,7 @@ int driverMain(int argc, char **argv) {
   ok = true;
   auto builtinFlags =
       "--ignore-unknown-modules --allow-use-before-declare --single-unit -Wrange-width-oob -Wrange-oob"sv;
-  if (cmdOptsRes.count("fslang"))
+  if (cmdOptsRes.count("slang-argfile"))
     ok &= slangDriver.processCommandFile(
         cmdOptsRes["slang-argfile"].as<std::string>(), true);
   std::string slangArgs = cmdOptsRes.count("slang-args")
